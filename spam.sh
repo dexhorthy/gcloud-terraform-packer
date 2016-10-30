@@ -5,8 +5,5 @@ if [ $# -ne 1 ]; then
     exit 1
 fi
 
-for i in {1..10000}; do
-    curl $1 --max-time 2 2>/dev/null &
-done
+ab -n 10000 -c 200 -s 2 http://$1/
 
-wait
