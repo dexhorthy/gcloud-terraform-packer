@@ -40,7 +40,7 @@ resource "google_compute_instance_group_manager" "demo" {
 
   instance_template  = "${google_compute_instance_template.demo.self_link}"
   target_pools       = ["${google_compute_target_pool.demo.self_link}"]
-  base_instance_name = "tf-demo-demo"
+  base_instance_name = "tf-packer-demo"
 }
 
 resource "google_compute_http_health_check" "demo" {

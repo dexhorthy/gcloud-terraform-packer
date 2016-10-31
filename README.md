@@ -125,7 +125,7 @@ Once we've bootstrapped our pool, we'll need to increase cpu load to trigger the
 are `f1-micro` instances, we'll be able to trigger scaling just by spamming nginx with lots of traffic.
 
 There's a script provided in `spam.sh` that given the value of `pool_public_ip`, 
-will send 10,000 requests to our instance pool using `curl`:
+will send 10,000 requests to our instance pool using `ab`:
 
 ```
 ./spam.sh <your_pool_public_ip>
